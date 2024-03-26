@@ -10,3 +10,28 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.counter {
+    text-align: center;
+    background: #bdbdbd;
+    margin-top: 30px;
+    padding: 1em;
+   
+}
+
+.counter div {
+    display: inline-block;
+    font-size: 5rem;
+    padding: 10px;
+    background-color: #161615;
+    color: #ffffff;
+    margin-top: 40px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid #fcfcfc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ajusta los valores según tu preferencia */
+    padding: 20px;
+}
+
+.clock {
+    background-color: red;
+}

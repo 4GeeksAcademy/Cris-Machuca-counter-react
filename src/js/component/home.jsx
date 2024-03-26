@@ -1,26 +1,52 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import SecondsCounter from "./secondscounter";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+
 
 //create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+    const [seconds, setSeconds] = useState(0);
+    const [isRunning, setIsRunning] = useState(true);
+
+    // Función para detener el contador
+    const stopCounter = () => {
+        setIsRunning(false);
+    };
+
+    // Función para reiniciar el contador
+    const resetCounter = () => {
+        setSeconds(0);
+    };
+
+    // Función para reanudar el contador
+    const resumeCounter = () => {
+        setIsRunning(true);
+    };
+
+    // Actualiza el contador cada segundo si el contador está en funcionamiento
+    useEffect(() => {
+        let interval;
+        if (isRunning) {
+            interval = setInterval(() => {
+                setSeconds(prevSeconds => prevSeconds + 1);
+            }, 1000);
+        }
+        return () => clearInterval(interval);
+    }, [isRunning]);
+
+    return (
+        <div className="text-center">
+            <h1>Contador Simple</h1>
+            <SecondsCounter seconds={seconds} />
+            <div>
+                <button onClick={stopCounter} className="btn btn-danger m-2">Detener</button>
+                <button onClick={resetCounter} className="btn btn-warning m-2">Reiniciar</button>
+                <button onClick={resumeCounter} className="btn btn-success m-2">Reanudar</button>
+            </div>
+        </div>
+    );
 };
 
 export default Home;
+
