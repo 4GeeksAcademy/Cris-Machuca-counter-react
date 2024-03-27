@@ -9,14 +9,14 @@ const SecondsCounter = (props) => {
         digits[index] = seconds % 10;
         seconds = Math.floor(seconds / 10);
         index--;
-    }
+    }  
 
     return (
         <>
         
             <div className="counter">
                 <div className="clock">
-                <i className="far fa-clock"></i>
+                    <i className="far fa-clock"></i>
                 </div>
                 {digits.map((digit, index) => (
                     <div key={index} className={`digit${index + 1}`}>

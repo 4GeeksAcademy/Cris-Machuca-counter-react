@@ -10,28 +10,80 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+h1 {
+    background-color: #161615;
+    color: white;
+    padding: 1em;
+    padding-top: 1em;
+    margin-bottom: 0;
+}
 .counter {
     text-align: center;
     background: #bdbdbd;
-    margin-top: 30px;
-    padding: 1em;
+    padding: 5em 1em;
+    margin-top: 0;
    
 }
 
 .counter div {
     display: inline-block;
-    font-size: 5rem;
-    padding: 10px;
     background-color: #161615;
     color: #ffffff;
+    font-size: 3em;
+    padding: 10px;
     margin-top: 40px;
     margin: 5px;
     border-radius: 10px;
     border: 2px solid #fcfcfc;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ajusta los valores según tu preferencia */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
 }
+.buttons {
+    padding: 2em;
+}
 
-.clock {
-    background-color: red;
+.btn {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    font-size: 1.2em;
+    width: 150px;
+    border-radius: 10px;
+    aspect-ratio: 4/2;
+    font-weight: bolder;
+}
+.container {
+    background-color: rgb(240, 236, 236);
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2em;
+}
+
+.yellowbutton {
+    color: #ffffff;
+}
+.yellowbutton:hover {
+    color: #ffffff;
+}
+
+label {
+    font-size: x-large;
+    padding: 2em;
+}
+.form-control {
+    height: 100%;
+    width: 30%;
+    border: 2px solid black;
+}
+
+footer {
+    background-color: #161615;
+    color: white;
+    font-size: 1.3em;
+    padding: 3em;
+}
+span {
+    color: blue;
+    font-weight: bold;
 }
